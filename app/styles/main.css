@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Armata&family=Saira:wght@200..800&family=NTR&family=Nova+Square&family=Cuprum:wght@200..800&family=Oswald:wght@200..700&family=Alumni+Sans:wght@200..700&family=Smooch+Sans:wght@200..900&family=Prompt:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Rubik+Iso&family=Share+Tech&family=Teko:wght@300;400;500&display=swap");
+:root {
+  --baseTextSize: 18px;
+  --textSizeIncrement: 1.618;
+  --text-xs: calc(var(--baseTextSize) / var(--textSizeIncrement));
+  --text-s: var(--baseTextSize);
+  --text-m: calc(var(--text-s) * var(--textSizeIncrement));
+  --text-l: calc(var(--text-m) * var(--textSizeIncrement));
+  --text-xl: calc(var(--text-l) * var(--textSizeIncrement));
+  --lineHeightFixedAmount: 0.35rem;
+  --lineHeightRelativeAmount: 1.618;
+  --globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
+  --fontFamily: Futura, sans-serif;
+  --unit: 0.69rem;
+  --spaceIncrement: 1.618;
+  --space-s: var(--unit);
+  --space-m: calc(var(--space-s) * var(--spaceIncrement));
+  --space-l: calc(var(--space-m) * var(--spaceIncrement));
+  --space-xl: calc(var(--space-l) * var(--spaceIncrement));
+  --space-2xl: calc(var(--space-xl) * var(--spaceIncrement));
+  --space-3xl: calc(var(--space-2xl) * var(--spaceIncrement));
+  --space-4xl: calc(var(--space-3xl) * var(--spaceIncrement));
+  --textFrameRatio: 3.33;
+  --textFrameY: 0.33em;
+  --textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));
+  --radius: .33rem;
+  --fieldBorderWidth: 1px;
+  --gutter-x: calc(100% - 95vw);
+}
+@media (min-width: 1600px) {
+  :root {
+    --gutter-x: calc(100% - 90vw);
+  }
+}
+
+:root {
+  --accentH: 196;
+  --accentS: 42%;
+  --accentL: 86%;
+  --c-accent: hsl(var(--accentH), var(--accentS), var(--accentL));
+  --c-accentContrasted: hsl(var(--accentH), var(--accentS), 15%);
+  --greyH: var(--accentH);
+  --greyS: 8%;
+  --initialGreyLightness: 93%;
+  --greyscaleLightnessIncrement: 11.3%;
+  --grey1L: var(--initialGreyLightness);
+  --grey2L: calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1);
+  --grey3L: calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2);
+  --grey4L: calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3);
+  --grey5L: calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4);
+  --grey6L: calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5);
+  --grey7L: calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6);
+  --grey8L: calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7);
+  --grey9L: calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 8);
+  --c-grey1: hsl(var(--greyH), var(--greyS), var(--grey1L));
+  --c-grey2: hsl(var(--greyH), var(--greyS), var(--grey2L));
+  --c-grey3: hsl(var(--greyH), var(--greyS), var(--grey3L));
+  --c-grey4: hsl(var(--greyH), var(--greyS), var(--grey4L));
+  --c-grey5: hsl(var(--greyH), var(--greyS), var(--grey5L));
+  --c-grey6: hsl(var(--greyH), var(--greyS), var(--grey6L));
+  --c-grey7: hsl(var(--greyH), var(--greyS), var(--grey7L));
+  --c-grey8: hsl(var(--greyH), var(--greyS), var(--grey8L));
+  --c-grey9: hsl(var(--greyH), var(--greyS), var(--grey9L));
+  --c-border: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.1);
+  --c-overlay: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.07);
+  --c-background: white;
+  --c-body: var(--c-grey8);
+  --c-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.5);
+  --c-fieldBorder: var(--c-grey2);
+  --c-buttonBg: var(--c-grey2);
+  --c-link: var(--c-accentContrasted);
+  --c-linkHover: #C0CFDF;
+  --c-linkActive: #3bc9db;
+}
+
+.dark {
+  --c-border: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.1);
+  --c-overlay: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.07);
+  --c-background: var(--c-grey9);
+  --c-body: var(--c-grey1);
+  --c-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.5);
+  --c-fieldBorder: var(--c-grey6);
+  --c-buttonBg: var(--c-grey6);
+  --c-link: #75859a;
+  --c-linkHover: #D4E0E9;
+  --c-linkActive: #3bc9db;
+}
+
+:root {
+  --phi: 1.618;
+  --e: 2.71828;
+  --pi: 3.14159;
+  --golden: 1.618;
+  --content-width: 1920px;
+  --spacing-unit: calc(1.618rem * var(--phi));
+  --space-phi: calc(1.618rem * var(--phi));
+  --space-e: calc(1.618rem * var(--e));
+  --space-pi: calc(1.618rem * var(--pi));
+  --base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --p: clamp(1rem, 0.314vw + 1.184rem, 1.314rem);
+  --sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --xxl: clamp(2.24rem, 2.38vw + 1.85rem, 3.45rem);
+  --thicc: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+  --big: clamp(4.20rem, 4.81vw + 2.66rem, 5.8rem);
+  --giant: clamp(6.854rem, 6.85vw + 5.089rem, 11.089rem);
+  --h1: clamp(4.236rem, 4.34vw + 2.854rem, 6.854rem);
+  --h2: clamp(2.618rem, 2.69vw + 1.236rem, 4.236rem);
+  --h3: clamp(1.618rem, 1.84vw + 1.121rem, 2.618rem);
+  --h4: clamp(1.314rem, 0.82vw + 1.618rem, 1.618rem);
+  --h5: clamp(1.101rem, 0.60vw + 1.303rem, 1.303rem);
+  --h6: clamp(0.969rem, 0.50vw + 1.121rem, 1.121rem);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --h1: var(--xxxl);
+    --h2: var(--xxl);
+    --h3: var(--xl);
+    --h4: var(--lg);
+    --h5: var(--md);
+  }
+}
+html {
+  font-size: 18px;
+}
+
+body {
+  background: var(--c-background);
+  color: var(--c-body);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  --gutter: 4.20vw;
+  width: 1920px;
+  max-width: calc(100% - var(--gutter) * 3.14159);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

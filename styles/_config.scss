@@ -1,0 +1,28 @@
+@use "functions" as *;
+
+$oswald: 'Oswald', sans-serif;
+$saira: 'Saira', sans-serif;
+$sharetech: 'Share Tech', sans-serif;
+$armata: 'Armata', sans-serif;
+$ntr: 'NTR', sans-serif;
+$rubik-iso: 'Rubik Iso', sans-serif;
+$nova-square: 'Nova Square', cursive;
+$teko: 'Teko', sans-serif;
+$prompt: 'Prompt', sans-serif;
+$cuprum: 'Cuprum', sans-serif;
+$alumni: 'Alumni Sans', sans-serif;
+$smooch: 'Smooch Sans', sans-serif;
+
+// Global base variables for text sizing, spacing and weight
+$text-font:           $saira;
+$text-line:           1.618;
+$text-weight:         366;
+$heading-font:        $oswald;
+$heading-weight:      500;
+
+$link: var(--c-accentContrasted);
+$linkHover: slate(4);
+$linkActive: ocCyan(4);
+
+$link-dark: cool(3);
+$linkHover-dark: slate(3);

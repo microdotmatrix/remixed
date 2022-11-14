@@ -468,11 +468,108 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-h1 {
-    font-size: var(--h1);
+.container {
+  width: 100%;
+}
+@media (min-width: 512px) {
+
+  .container {
+    max-width: 512px;
   }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 960px) {
+
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1440px) {
+
+  .container {
+    max-width: 1440px;
+  }
+}
+@media (min-width: 1600px) {
+
+  .container {
+    max-width: 1600px;
+  }
+}
+@media (min-width: 1780px) {
+
+  .container {
+    max-width: 1780px;
+  }
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.top-6 {
+  top: 1.5rem;
+}
+.right-6 {
+  right: 1.5rem;
+}
+.top-0 {
+  top: 0px;
+}
+.left-0 {
+  left: 0px;
+}
+.top-20 {
+  top: 5rem;
+}
+.right-16 {
+  right: 4rem;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-0 {
+  z-index: 0;
+}
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
+}
+.h-\[80vh\] {
+  height: 80vh;
+}
+.h-full {
+  height: 100%;
+}
+.w-80 {
+  width: 20rem;
+}
+.w-full {
+  width: 100%;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.resize {
+  resize: both;
 }
 .flex-col {
   flex-direction: column;
@@ -480,7 +577,33 @@ h1 {
 .flex-nowrap {
   flex-wrap: nowrap;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 @media (min-width: 960px) {
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
 
   .md\:w-2\/3 {
     width: 66.666667%;
@@ -492,5 +615,15 @@ h1 {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+}
+@media (min-width: 1440px) {
+
+  .xl\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .xl\:w-2\/3 {
+    width: 66.666667%;
   }
 }

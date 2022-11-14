@@ -21,9 +21,11 @@
     "graphql-request": "^5.0.0",
     "isbot": "^3.5.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "suspend-react": "^0.0.8"
   },
   "devDependencies": {
+    "@iconify/react": "^4.0.0",
     "@remix-run/dev": "^1.7.5",
     "@remix-run/eslint-config": "^1.7.5",
     "@tailwindcss/typography": "^0.5.8",

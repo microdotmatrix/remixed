@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react'
-import { useLoaderData, Outlet } from '@remix-run/react';
+import { Suspense, lazy } from 'react'
+import { useLoaderData } from '@remix-run/react';
 import { json } from '@remix-run/node'
 import { graphql, GET_POSTS } from '@api/wp';
 

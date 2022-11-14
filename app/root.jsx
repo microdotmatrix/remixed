@@ -6,7 +6,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch
+  useCatch,
+  useLocation
 } from "@remix-run/react";
 
 import Nav from '@comp/nav'
@@ -14,10 +15,13 @@ import Nav from '@comp/nav'
 import tailwind from '@css/tailwind.css';
 import globalStyles from '@css/main.css';
 
+import { AnimatePresence } from "framer-motion";
+
 export let links = () => {
   return [
     { rel: "stylesheet", href: tailwind },
     { rel: "stylesheet", href: globalStyles },
+    { rel: "stylesheet", href: 'https://fonts.googleapis.com/css2?family=Armata&family=Saira:wght@200..800&family=NTR&family=Nova+Square&family=Cuprum:wght@200..800&family=Oswald:wght@200..700&family=Alumni+Sans:wght@200..700&family=Smooch+Sans:wght@200..900&family=Prompt:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Rubik+Iso&family=Share+Tech&family=Teko:wght@300;400;500&display=swap' }
   ]
 }
 
@@ -30,10 +34,13 @@ export const meta = () => ({
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
 export default function App() {
+  const location = useLocation()
   return (
     <Document>
       <Layout>
-        <Outlet />
+        <AnimatePresence mode="wait">
+          <Outlet />
+        </AnimatePresence>
       </Layout>
     </Document>
   );
@@ -115,11 +122,11 @@ function Document({ children, title }) {
 
 function Layout({ children }) {
   return (
-    <div className="remix-app">
-      <header className="remix-app__header">
-        <div className="container">
+    <div className="app">
+      <header className="app-header">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between w-full">
           <section className="site-logo">
-            <Link to="/" title="Remix" className="remix-app__header-home-link">
+            <Link to="/" title="Remix">
               <RemixLogo />
             </Link>
           </section>
@@ -129,11 +136,11 @@ function Layout({ children }) {
           </section>
         </div>
       </header>
-      <div className="remix-app__main">
-        <div className="container mx-auto remix-app__main-content">{children}</div>
-      </div>
-      <footer className="remix-app__footer">
-        <div className="container remix-app__footer-content">
+      <main className="app-content">
+        { children }
+      </main>
+      <footer className="app-footer">
+        <div className="container">
           <p>&copy; You!</p>
         </div>
       </footer>

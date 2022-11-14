@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify/react': ^4.0.0
   '@remix-run/dev': ^1.7.5
   '@remix-run/eslint-config': ^1.7.5
   '@remix-run/node': ^1.7.5
@@ -21,6 +22,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   sass: ^1.56.1
+  suspend-react: ^0.0.8
   tailwindcss: ^3.2.4
 
 dependencies:
@@ -31,8 +33,10 @@ dependencies:
   isbot: 3.6.5
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  suspend-react: 0.0.8_react@18.2.0
 
 devDependencies:
+  '@iconify/react': 4.0.0_react@18.2.0
   '@remix-run/dev': 1.7.5_67odqug3q6zvwws4422s5yrks4
   '@remix-run/eslint-config': 1.7.5_u5s2ztivgin3yy4srvdhm3tgpm
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
@@ -1463,6 +1467,19 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify/react/4.0.0_react@18.2.0:
+    resolution: {integrity: sha512-YE+z5PCegYyuJtLR6KBbJNlssmuVgRyFyRxcgxSPVkN3Gsm7npSzrUh+gWlBxrNb5g4Q6Nnb1gczPBNcwtUpng==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      '@iconify/types': 2.0.0
+      react: 18.2.0
+    dev: true
+
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
 
   /@istanbuljs/load-nyc-config/1.1.0:
@@ -9203,6 +9220,14 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /suspend-react/0.0.8_react@18.2.0:
+    resolution: {integrity: sha512-ZC3r8Hu1y0dIThzsGw0RLZplnX9yXwfItcvaIzJc2VQVi8TGyGDlu92syMB5ulybfvGLHAI5Ghzlk23UBPF8xg==}
+    peerDependencies:
+      react: '>=17.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /symbol-tree/3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}

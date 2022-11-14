@@ -10,9 +10,11 @@ export let loader = async ({ params }) => {
 
 export default function Index() {
   let page = useLoaderData()
+
   if (!page) {
     throw new Response("Not Found", { status: 404 })
   }
+
   return (
     <div className="flex flex-col md:flex-row flex-nowrap">
       <article className='md:w-2/3'>
@@ -22,14 +24,14 @@ export default function Index() {
 
       <aside className='md:w-1/3'>
         <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-          <h1>Welcome to Remix</h1>
+          <h3>Welcome to Remix</h3>
           <ul>
             <li>
               <a
                 target="_blank"
                 href="https://remix.run/tutorials/blog"
                 rel="noreferrer"
-              >
+                >
                 15m Quickstart Blog Tutorial
               </a>
             </li>
@@ -38,7 +40,7 @@ export default function Index() {
                 target="_blank"
                 href="https://remix.run/tutorials/jokes"
                 rel="noreferrer"
-              >
+                >
                 Deep Dive Jokes App Tutorial
               </a>
             </li>

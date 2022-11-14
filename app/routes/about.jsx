@@ -14,9 +14,9 @@ export default function About() {
     throw new Response("Not Found", { status: 404 })
   }
   return (
-    <>
+    <div className='container'>
       <h1>{page.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: page.content }} />
-    </>
+    </div>
   )
 }

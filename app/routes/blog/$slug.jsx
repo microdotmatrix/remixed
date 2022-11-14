@@ -13,6 +13,11 @@ export let loader = async ({ params }) => {
   return json(data.postBy);
 }
 
+export const meta = ({ data }) => ({
+  title: `${data.seo.title} - Blog Posts from WordPress`,
+  description: `${data.seo.metaDesc}`
+});
+
 export default function Post() {
   let post = useLoaderData()
   

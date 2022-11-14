@@ -17,7 +17,7 @@
       "@api/*": ["./app/api/*"],
       "@comp/*": ["./app/components/*"],
       "@ctx/*": ["./app/context/*"],
-      "@hook/*": ["./app/hooks/*"],
+      "@hooks/*": ["./app/hooks/*"],
       "@routes/*": ["./app/routes/*"],
       "@util/*": ["./app/utilities/*"],
       "@css/*": ["./app/styles/*"]

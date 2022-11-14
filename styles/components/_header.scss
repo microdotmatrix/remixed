@@ -1,0 +1,33 @@
+@use '../functions' as *;
+
+.app-header {
+  padding: var(--space-xl) 0;
+  .container {
+    justify-content: space-between;
+    .site-navigation {
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 260px;
+        ul {
+          li {
+            text-align: right;
+            background: rgba(liquid(8), 0.2);
+            margin: 0 0 10px 0;
+            padding: 0.5rem 1rem;
+            &:hover {
+              background: rgba(liquid(8), 0.5);
+            }
+            a {
+              display: inline-flex;
+              align-items: center;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}

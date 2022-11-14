@@ -1,0 +1,28 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  background: var(--c-background);
+  color: var(--c-body);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 0 var(--gutter-x);
+}
+
+.post-view {
+  transform: translateX(-100px);
+}
+
+.page-view {
+  opacity: 0;
+}
+
+
+
+.app-content {
+  padding: 0;
+}

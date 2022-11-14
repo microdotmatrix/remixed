@@ -69,6 +69,12 @@ export const GET_POST = gql`
     title
     excerpt
     content
+    seo {
+      title
+      metaDesc
+      opengraphTitle
+      opengraphDescription
+    }
     featuredImage {
       node {
         sourceUrl
@@ -122,6 +128,73 @@ export const GET_PAGE = gql`
       uri
       content
       id
+      seo {
+        title
+        metaDesc
+        opengraphTitle
+        opengraphDescription
+      }
+    }
+  }
+`
+
+export const GET_PRODUCTS = gql`
+  query GetProducts {
+    products(first: 5) {
+      nodes {
+        name
+        slug
+        description
+        
+        ... on SimpleProduct {
+          price
+          salePrice
+          regularPrice
+        }
+        ... on VariableProduct {
+          price
+          salePrice
+          regularPrice
+        }
+        ... on ExternalProduct {
+          price
+          salePrice
+          regularPrice
+        }
+      }
+    }
+  }
+`;
+
+export const GET_PRODUCT = gql`
+  query GetProduct($slug: ID!) {
+    product(id: $slug, idType: SLUG) {
+      name
+      slug
+      description
+      image {
+        altText
+        sourceUrl
+        mediaDetails {
+          height
+          width
+        }
+      }
+      ... on SimpleProduct {
+        price
+        salePrice
+        regularPrice
+      }
+      ... on VariableProduct {
+        price
+        salePrice
+        regularPrice
+      }
+      ... on ExternalProduct {
+        price
+        salePrice
+        regularPrice
+      }
     }
   }
 `

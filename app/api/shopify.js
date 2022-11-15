@@ -1,7 +1,7 @@
 import { GraphQLClient, gql } from 'graphql-request'
 
-const API_URL = 'https://shadow-work-dev.myshopify.com/api/2022-10/graphql.json';
-const ACCESS_TOKEN = '848d24de823edfb8703e15a747bf8132'
+export const API_URL = 'https://shadow-work-dev.myshopify.com/api/2022-10/graphql.json';
+export const ACCESS_TOKEN = '848d24de823edfb8703e15a747bf8132'
 
 export const graphql = new GraphQLClient(API_URL, {
   headers: {
